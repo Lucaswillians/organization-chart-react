@@ -1,11 +1,11 @@
 import './TextInput.css'
 
-export default function TextInput ()
+export default function TextInput (props)
 {
   return (
     <div className="text-input">
-      <label>Nome</label>
-      <input placeholder='Digite seu nome'/>
+      <label>{props.label}</label>
+      <input placeholder={props.placeholder}/>
     </div>
   );
 }
