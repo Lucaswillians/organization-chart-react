@@ -6,16 +6,7 @@ import { useState } from 'react';
 
 export default function Form (props)
 {
-  const cards = [
-  "Protagonistas", 
-  "Coadjuvantes",
-  "Armas", 
-  "Cavalos",
-  "Cidades", 
-  "Vestimentas",
-  "Easter-eggs"
-];
-
+  
   const [name, setName] = useState('');
   const [role, setRole] = useState("");
   const [image, setImage] = useState("");
@@ -44,7 +35,7 @@ export default function Form (props)
         <TextInput label="Imagem" placeholder="anexe sua imagem" 
         val={image} toChanged={val => setImage(val)} />
         
-        <Dropdown require={true}label="Card" items={cards} 
+        <Dropdown require={true}label="Card" items={props.infos} 
         val={card} toChanged={val => setCard(val)} />
         
         <Button>Criar card</Button>
