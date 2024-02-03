@@ -1,6 +1,5 @@
 .text-input {
   margin: 24px 0;
-
 }
 
 .text-input label {
@@ -10,17 +9,18 @@
   font-weight: bold;
 }
 
-.text-input input{
+.text-input input {
   background-color: rgb(0, 0, 0);
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.0);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0);
   width: 100%;
   border-radius: 5px;
   border: none;
   font-size: 24px;
   padding: 24px;
   box-sizing: border-box;
+  color: white;
 }
 
-.text-input input::placeholder{
-  color: #A00B17;
+.text-input input::placeholder {
+  color: #a00b17;
 }

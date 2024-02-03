@@ -1,10 +1,9 @@
-import { useState } from 'react';
-import Banner from './components/Banner/Banner';
-import Form from './components/Form';
-import Card from './components/Card';
+import { useState } from "react";
+import Banner from "./components/Banner/Banner";
+import Form from "./components/Form";
+import Card from "./components/Card";
 
 function App() {
-
   const infos = [
     {
       name: "Protagonistas",
@@ -51,24 +50,33 @@ function App() {
 
   const [gameCards, setGameCards] = useState([]);
 
-  const toTheGameCardAdded = (gameCard) =>
-  {
+  const toTheGameCardAdded = (gameCard) => {
     console.log(gameCard);
-    setGameCards([...gameCards, gameCard])
-  }
+    setGameCards([...gameCards, gameCard]);
+  };
 
   return (
     <div className="App">
       <Banner />
 
-      <Form infos={infos.map(info => info.name)} toGameCard={(gameCard) => toTheGameCardAdded(gameCard)} />
-      
-      {infos.map(info => <Card key={info.name} name={info.name} 
-      firstColor={info.firstColor} secondColor={info.secondColor}/>)}
-    
+      <Form
+        infos={infos.map((info) => info.name)}
+        toGameCard={(gameCard) => toTheGameCardAdded(gameCard)}
+      />
+
+      {infos.map((info) => (
+        <Card
+          key={info.name}
+          name={info.name}
+          firstColor={info.firstColor}
+          secondColor={info.secondColor}
+          gameCards={gameCards.filter(
+            (gameCard) => gameCard.info === info.name
+          )}
+        />
+      ))}
     </div>
   );
 }
-
 
 export default App;

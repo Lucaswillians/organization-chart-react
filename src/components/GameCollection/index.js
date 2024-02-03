@@ -1,16 +1,15 @@
-import './GameCollection.css'
+import "./GameCollection.css";
 
-export default function GameCollection ()
-{
+export default function GameCollection({name, image, role }) {
   return (
     <div className="game-collection">
       <div className="header">
-        <img src="./assets/arthur-morgan.jpeg" alt="Lucas Willian" />
+        <img src={image} alt={name} />
       </div>
 
       <div className="footer">
-        <h4>Arthur Morgan</h4>
-        <h5>Exímio atirador e lutador</h5>
+        <h4>{name}</h4>
+        <h5>{role}</h5>
       </div>
     </div>
   );
