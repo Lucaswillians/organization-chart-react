@@ -64,15 +64,15 @@ function App() {
         toGameCard={(gameCard) => toTheGameCardAdded(gameCard)}
       />
 
-      {infos.map((info) => (
+      {infos.map((info, index) => (
         <Card
-          key={info.name}
+          key={index}
           name={info.name}
           firstColor={info.firstColor}
           secondColor={info.secondColor}
           gameCards={gameCards.filter(
-            (gameCard) => gameCard.info === info.name
-          )}
+          (gameCard) => gameCard.card === info.name
+           )}
         />
       ))}
     </div>

@@ -1,6 +1,6 @@
 import "./GameCollection.css";
 
-export default function GameCollection({name, image, role }) {
+export default function GameCollection({ name, image, role }) {
   return (
     <div className="game-collection">
       <div className="header">
