@@ -48,7 +48,7 @@ export default function Form(props) {
 
         <TextInput
           label="Imagem"
-          placeholder="anexe sua imagem"
+          placeholder="Cole a URL da imagem"
           val={image}
           toChanged={(val) => setImage(val)}
         />
